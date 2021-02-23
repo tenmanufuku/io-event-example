@@ -6,7 +6,7 @@
   "maxReplicas": 10,
   "workers": 4,
   "events": {
-    "example": {
+    "liveUsersUpdate": {
       "sender": "vtex.events-example",
       "keys": ["send-event"]
     }

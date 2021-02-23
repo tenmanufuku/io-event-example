@@ -5,7 +5,7 @@ import {
   ServiceContext,
   RecorderState,
 } from '@vtex/api'
-import { example } from './events/example'
+import { updateLiveUsers } from './events/liveUsersUpdate'
 import { createSendEvent } from './routes/notify'
 import { getCacheContext, setCacheContext } from './utils/cachedContext'
 
@@ -48,7 +48,7 @@ export default new Service<IOClients, State, ParamsContext>({
     },
   },
   events: {
-    example,
+    liveUsersUpdate: updateLiveUsers,
   },
   routes: {
     hcheck: (ctx: any) => {
